@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = [999,1,2,3,2,1,4,5,3]
+
+        function uniq(array){
+            var result = []
+
+            var hash = {}
+
+            for(let i = 0; i< array.length; i++){
+                hash[array[i]] = true  
+            }
+            console.log(hash);
+            
+            for(let key in hash){
+                result.push(key)
+                console.log(key);
+                
+            }
+
+            return result
+        }
+
+        console.log(uniq(a))// ['1', '2', '3', '4', '5']
+
+        // var hash = {}
+        // // 传入字符串'4' 作为下标
+        // hash['4'] = '字符串'
+        // // 再传入数字4作为下标
+        // hash[4] = '数字'
+        // // 输出hash对象,应该有两个键值对
+        // console.log(hash);
+
+        // var a = [1, 2, 3, 2, 1, {name: 'Object'},{sex: 'man'},{age: '18'}]
+
+        // function uniq(array) {
+        //     var result = []
+
+        //     var hash = {}
+
+        //     for (let i = 0; i < array.length; i++) {
+        //         hash[array[i]] = true
+        //     }
+
+        //     for (let key in hash) {
+        //         result.push(key)
+        //     }
+
+        //     return result
+        // }
+
+        // console.log(uniq(a))// ['1', '2', '3', '4', '5']
+
+        // var hash = {}
+        // // 传入对象{name: 'object'} 作为下标
+        // hash[{name: 'object'}] = true
+        // hash[{age: 'object'}] = 18
+        // // 输出hash对象
+        // console.log(hash)
+
+        // var a = [1, 2, 3, 4,'4','3',2, 1, {name: 'Object'},{name: 'Object'},{sex: 'man'},{age: '18'}]
+
+        // function uniq(array){
+        //     return Array.from(new Set(array))
+        // }
+
+        // console.log(uniq(a))// [1, 2, 3, 4,'4','3',{name: 'Object'},{name: 'Object'},{sex: 'man'},{age: '18'}]
+
+
+
+
+    
+
+    </script>
+</body>
+
+</html>
